@@ -17,7 +17,7 @@ The overall results are promising. For specific details, please check the perfor
 ![img_3.png](img_3.png)
 ![img_4.png](img_4.png)
 
-### Shortcomings
+### Shortcomings（Taking Chinese as an example）
 
 * The model can detoxify text in most cases, but there are still some issues, such as homophonic puns and ambiguous boundary problems. For example, in the 4th line of the Chinese results in the result set, "house" is a homophone for "好死" (hǎosǐ, meaning "a good death"), but it was detoxified as "房子" (fángzi, meaning "house"), altering the original meaning and semantics. The correct detoxification should be "这样的人没有好下场" (Such people will come to no good end).
 ![img_1.png](img_1.png)
