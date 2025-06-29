@@ -196,7 +196,7 @@ def parse_response(response):
 
 def deepseek_request(messages):
     url = "https://deepseek.fosu.edu.cn/v1/chat/completions"
-    api_key = "sk-XXXXX"
+    api_key = "sk-XXXX"
 
     data = {
         "model": "DeepSeek-R1-Int8",
@@ -230,7 +230,7 @@ def kimi_request(messages):
     try:
         # response = requests.request("POST", url, json=payload, headers=headers)
         client = OpenAI(
-            api_key="sk-XXXX",  # 在这里将 MOONSHOT_API_KEY 替换为你从 Kimi 开放平台申请的 API Key
+            api_key="sk-XXXXX",  # 在这里将 MOONSHOT_API_KEY 替换为你从 Kimi 开放平台申请的 API Key
             base_url="https://api.moonshot.cn/v1",
         )
 
@@ -381,13 +381,12 @@ def main_among_ai(filename, output_file, vocabulary_fold=None, examples_fold=Non
                     neutral_sentence_list.append(neutral_text)
             neutral_sentence_list.append(replace_toxic(toxic_sentence=toxic,bad_words=vocabulary_dict[lang],lang=lang))
             evaluate_result = evaluate(toxic,neutral_sentence_list,lang)
-            print(evaluate_result)
 
             writer.writerow(evaluate_result)
 
 
 if __name__ == '__main__':
-    main_among_ai(filename="../test_inputs_upd.tsv",
+    main_among_ai(filename="./test_inputs_upd.tsv",
                   output_file="dev_outputs_upd_ar.tsv",
-                  examples_fold="../examples_data",
-                  vocabulary_fold="../toxi_text_list")
+                  examples_fold="./examples_data",
+                  vocabulary_fold="./toxi_text_list")
