@@ -4,7 +4,7 @@
 
 *  examples_data 文件目录下为我们使用的小样本内容，包括官方提供的和我们自行构建的内容
 *  result_LLM_EnsembleLearning 该文件目录为最终结构的路径，其中我们将每个语言单独分开，方便读者查找对应语言的解毒结果
-*  toxi_text_list 目录为有毒词汇的汇总目录，包括官方提供的toxic_keywords(https://huggingface.co/datasets/textdetox/multilingual_toxic_lexicon)和 toxic_span(https://huggingface.co/datasets/textdetox/multilingual_toxic_spans) 的整理汇总
+*  toxi_text_list 目录为有毒词汇的汇总目录，包括官方提供的toxic_keywords(https://huggingface.co/datasets/textdetox/multilingual_toxic_lexicon) 和 toxic_span(https://huggingface.co/datasets/textdetox/multilingual_toxic_spans) 的整理汇总
 *  src_LLM_EnsembleLearning 目录为源代码的集合，包括解毒代码（more_model.py）和评价代码（evaluate.py）
 
 ## 2.实现流程
